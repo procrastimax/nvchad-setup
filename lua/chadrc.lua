@@ -5,8 +5,8 @@
 local M = {}
 
 M.ui = {
-  theme = "onenord",
-  theme_toggle = { "onenord", "onenord_light" },
+  theme = "tomorrow_night",
+  theme_toggle = { "tomorrow_night", "tomorrow_night_light" },
   lsp_semantic_tokens = true, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
   tabufline = {
     show_numbers = false,
