@@ -21,6 +21,7 @@ return {
         "stylua",
         "html-lsp",
         "css-lsp",
+        "texlab",
         "prettier",
         "typescript-language-server",
         "clangd",
