@@ -24,17 +24,15 @@ return {
         "texlab",
         "prettier",
         "typescript-language-server",
-        "clangd",
-        "clang-format",
         "shfmt",
         "rust-analyzer",
+        "ruff-lsp",
         "pyright",
-        "black",
       },
     },
   },
   {
-    "nvim-treesitter/nvim-treesitter",
+    "nvim-treesitter",
     opts = {
       ensure_installed = {
         "vim",
