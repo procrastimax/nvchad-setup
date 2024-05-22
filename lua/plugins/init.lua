@@ -60,17 +60,6 @@ return {
     "mrcjkb/rustaceanvim",
     version = "^4",
     ft = { "rust" },
-    keys = {
-      { "<leader>rr", "<cmd> RustLsp runnables <CR>", desc = "Rust: Runnables" },
-      { "<leader>rd", "<cmd> RustLsp debuggables <CR>", desc = "Rust: Debuggables" },
-      { "<leader>rt", "<cmd> RustLsp testables <CR>", desc = "Rust: Testables" },
-      { "<leader>rm", "<cmd> RustLsp expandMacro <CR>", desc = "Rust: Expand Macro" },
-      { "<leader>ree", "<cmd> RustLsp explainError <CR>", desc = "Rust: Explain Error" },
-      { "<leader>red", "<cmd> RustLsp renderDiagnostic <CR>", desc = "Rust: Explain Diagnostics" },
-      { "<leader>rc", "<cmd> RustLsp openCargo <CR>", desc = "Rust: Open Cargo" },
-      { "K", "<cmd> RustLsp hover actions <CR>", "Rust: Hover Actions" },
-      { "<leader>ca", "<cmd> RustLsp codeAction <CR>", "Rust: Code Action (grouped)" },
-    },
   },
   {
     "saecki/crates.nvim",

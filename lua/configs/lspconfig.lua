@@ -8,17 +8,10 @@ local servers = { "lua_ls", "html", "cssls", "tsserver", "clangd" }
 
 local map = vim.keymap.set
 
-local on_attach_lsp = function(client, bufnr)
-  on_attach(client, bufnr)
-  map("n", "K", vim.lsp.buf.hover, { buffer = bufnr, desc = "LSP Hover" })
-  map("n", "[d", vim.diagnostic.goto_prev, { buffer = bufnr, desc = "LSP Diagnostic Prev" })
-  map("n", "]d", vim.diagnostic.goto_next, { buffer = bufnr, desc = "LSP Diagnostic Prev" })
-end
-
 -- lsps with default config
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
-    on_attach = on_attach_lsp,
+    on_attach = on_attach,
     on_init = on_init,
     capabilities = capabilities,
   }
@@ -26,7 +19,7 @@ end
 
 lspconfig.ruff_lsp.setup {
   on_attach = function(client, bufnr)
-    on_attach_lsp(client, bufnr)
+    on_attach(client, bufnr)
     client.server_capabilities.hoverProvider = false
   end,
   on_init = on_init,
@@ -40,7 +33,7 @@ lspconfig.ruff_lsp.setup {
 }
 
 lspconfig.pyright.setup {
-  on_attach = on_attach_lsp,
+  on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
   settings = {
