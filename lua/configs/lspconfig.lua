@@ -4,7 +4,7 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "lua_ls", "html", "cssls", "tsserver", "clangd" }
+local servers = { "lua_ls", "html", "cssls", "ts_ls", "clangd" }
 
 local map = vim.keymap.set
 
