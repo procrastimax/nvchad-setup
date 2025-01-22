@@ -26,6 +26,7 @@ return {
         "html",
         "python",
         "typescript",
+        "tsx",
         "javascript",
       },
     },
