@@ -8,7 +8,7 @@ o.scrolloff = 5
 
 -- FOLDING
 vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldcolumn = "0"
 vim.opt.foldtext = ""
 vim.opt.foldlevelstart = 4
@@ -21,7 +21,7 @@ vim.g.rustaceanvim = {
   server = {
     on_attach = function(client, bufnr)
       -- you can also put keymaps in here
-      vim.keymap.set("n", "<leader>a", function()
+      vim.keymap.set("n", "<leader>ca", function()
         vim.cmd.RustLsp "codeAction" -- supports rust-analyzer's grouping
         -- or vim.lsp.buf.codeAction() if you don't want grouping.
       end, { silent = true, buffer = bufnr, desc = "Rust Code Action" })
