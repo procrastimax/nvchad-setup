@@ -3,17 +3,21 @@ return {
     "stevearc/conform.nvim",
     event = "BufWritePre",
     opts = require "configs.conform",
+    lazy = true,
   },
 
   {
     "neovim/nvim-lspconfig",
-    config = function()
+    lazy = true,
+    opts = {},
+    config = function() -- this needs to be set
       require "configs.lspconfig"
     end,
   },
 
   {
     "nvim-treesitter/nvim-treesitter",
+    lazy = true,
     opts = {
       ensure_installed = {
         "vim",
@@ -41,21 +45,20 @@ return {
     "saecki/crates.nvim",
     tag = "stable",
     event = { "BufRead Cargo.toml" },
-    config = function()
-      require("crates").setup()
-    end,
+    lazy = true,
+    opts = {},
   },
 
   {
     "echasnovski/mini.nvim",
     version = "*",
-    config = function()
-      require("mini.icons").setup()
-    end,
+    lazy = true,
+    opts = {},
   },
 
   {
     "williamboman/mason.nvim",
+    lazy = true,
     opts = {
       ensure_installed = {
         "css-lsp",
