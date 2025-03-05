@@ -8,6 +8,7 @@ local options = {
     typescriptreact = { "prettier" },
     javascript = { "prettier" },
     javascriptreact = { "prettier" },
+    python = { "ruff" },
   },
 
   format_on_save = {

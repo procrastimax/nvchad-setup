@@ -50,13 +50,6 @@ return {
   },
 
   {
-    "echasnovski/mini.nvim",
-    version = "*",
-    lazy = true,
-    opts = {},
-  },
-
-  {
     "williamboman/mason.nvim",
     lazy = true,
     opts = {
