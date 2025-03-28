@@ -3,7 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 
-local servers = { "html", "cssls", "ts_ls", "ruff", "basedpyright" }
+local servers = { "html", "cssls", "ts_ls", "ruff", "basedpyright", "eslint" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 for _, lsp in ipairs(servers) do
@@ -14,8 +14,14 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.eslint.setup {
+lspconfig.lexical.setup {
   on_attach = nvlsp.on_attach,
-  on_init = nvlsp.on_init,
+  -- on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
+  cmd = { "/home/max/code/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
+  root_dir = function(fname)
+    return lspconfig.util.root_pattern("mix.exs", ".git")(fname) or vim.loop.cwd()
+  end,
+  filetypes = { "elixir", "eelixir", "heex" },
+  settings = {},
 }
