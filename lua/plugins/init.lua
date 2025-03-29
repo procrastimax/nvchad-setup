@@ -36,6 +36,7 @@ return {
         "eex",
         "elixir",
         "heex",
+        "typst",
       },
     },
   },
@@ -65,6 +66,7 @@ return {
         "stylua",
         "typescript-language-server",
         "eslint-lsp",
+        "tinymist",
       },
     },
   },
@@ -77,5 +79,14 @@ return {
       { "<leader>o", "<cmd>Outline<CR>", desc = "Toggle outline" },
     },
     opts = {}, -- this is needed for the setup({}) function
+  },
+
+  {
+    "chomosuke/typst-preview.nvim",
+    lazy = false, -- or ft = 'typst'
+    version = "1.*",
+    opts = {
+      dependencies_bin = { ["tinymist"] = "tinymist" },
+    }, -- lazy.nvim will implicitly calls `setup {}`
   },
 }
