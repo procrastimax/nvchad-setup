@@ -37,4 +37,6 @@ vim.schedule(function()
 end)
 
 -- custom imports
+require "configs.commands"
 require "configs.typst"
+require "configs.rustaceanvim"
