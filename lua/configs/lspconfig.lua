@@ -3,7 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 
-local servers = { "html", "cssls", "ts_ls", "ruff", "basedpyright", "eslint" }
+local servers = { "html", "cssls", "eslint", "ruff", "basedpyright" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 for _, lsp in ipairs(servers) do
@@ -36,3 +36,5 @@ lspconfig.tinymist.setup {
     semanticTokens = "disable",
   },
 }
+
+require "configs.typescript"
