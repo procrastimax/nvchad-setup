@@ -1,20 +1,10 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = "BufWritePre",
+    event = { "BufWritePre" },
     opts = require "configs.conform",
     lazy = true,
   },
-
-  {
-    "neovim/nvim-lspconfig",
-    lazy = true,
-    opts = {},
-    config = function() -- this needs to be set
-      require "configs.lspconfig"
-    end,
-  },
-
   {
     "nvim-treesitter/nvim-treesitter",
     lazy = true,
