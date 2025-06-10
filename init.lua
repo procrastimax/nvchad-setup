@@ -38,6 +38,5 @@ end)
 
 -- custom imports
 require "configs.lspconfig"
-require "configs.commands"
 require "configs.typst"
 require "configs.rustaceanvim"

@@ -11,6 +11,3 @@ o.foldcolumn = "0"
 o.foldtext = ""
 o.foldlevelstart = 4
 o.foldnestmax = 4
-
--- setup update time for CursorHold (4000ms by default)
-o.updatetime = 100
