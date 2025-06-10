@@ -5,6 +5,7 @@ local servers = {
   html = {},
   cssls = {},
   eslint = {},
+  ts_ls = {},
   ruff = {},
   basedpyright = {},
   lexical = {
