@@ -2,6 +2,7 @@
 require("nvchad.configs.lspconfig").defaults()
 
 local servers = {
+  prettier = {},
   html = {},
   cssls = {},
   eslint = {},

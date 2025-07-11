@@ -37,6 +37,6 @@ vim.schedule(function()
 end)
 
 -- custom imports
-require "configs.lspconfig"
 require "configs.typst"
 require "configs.rustaceanvim"
+require "configs.treesitter"

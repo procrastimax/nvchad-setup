@@ -1,39 +1,21 @@
 return {
+
   {
     "stevearc/conform.nvim",
-    event = { "BufWritePre" },
+    event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
-    lazy = true,
   },
+
   {
-    "nvim-treesitter/nvim-treesitter",
-    lazy = true,
-    opts = {
-      ensure_installed = {
-        "vim",
-        "rust",
-        "lua",
-        "vimdoc",
-        "html",
-        "css",
-        "python",
-        "typescript",
-        "tsx",
-        "javascript",
-        "json",
-        "c",
-        "go",
-        "eex",
-        "elixir",
-        "heex",
-        "typst",
-      },
-    },
+    "neovim/nvim-lspconfig",
+    config = function()
+      require "configs.lspconfig"
+    end,
   },
 
   {
     "mrcjkb/rustaceanvim",
-    version = "^5", -- Recommended
+    version = "^6", -- Recommended
     lazy = false, -- This plugin is already lazy
   },
 
@@ -43,22 +25,6 @@ return {
     event = { "BufRead Cargo.toml" },
     lazy = true,
     opts = {},
-  },
-
-  {
-    "williamboman/mason.nvim",
-    lazy = true,
-    opts = {
-      ensure_installed = {
-        "css-lsp",
-        "html-lsp",
-        "prettier",
-        "stylua",
-        "typescript-language-server",
-        "eslint-lsp",
-        "tinymist",
-      },
-    },
   },
 
   {
