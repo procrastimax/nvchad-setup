@@ -5,20 +5,17 @@ return {
     event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
   },
-
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
     end,
   },
-
   {
     "mrcjkb/rustaceanvim",
     version = "^6", -- Recommended
     lazy = false, -- This plugin is already lazy
   },
-
   {
     "saecki/crates.nvim",
     tag = "stable",
@@ -26,7 +23,6 @@ return {
     lazy = true,
     opts = {},
   },
-
   {
     "hedyhli/outline.nvim",
     lazy = true,
@@ -36,7 +32,6 @@ return {
     },
     opts = {}, -- this is needed for the setup({}) function
   },
-
   {
     "chomosuke/typst-preview.nvim",
     lazy = false, -- or ft = 'typst'
