@@ -6,6 +6,8 @@ local additional_languages = {
   "go",
   "rust",
   "typescript",
+  "tsx",
+  "json",
   "html",
   "css",
   "javascript",
