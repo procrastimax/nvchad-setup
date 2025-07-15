@@ -6,6 +6,7 @@ local options = {
     python = { "ruff" },
     javascript = { "prettier" },
     typescript = { "prettier" },
+    tsx = { "prettier" },
     json = { "prettier" },
   },
 

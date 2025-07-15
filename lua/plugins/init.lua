@@ -1,8 +1,11 @@
 return {
+  {
+    "mason-org/mason.nvim",
+  },
 
   {
     "stevearc/conform.nvim",
-    event = "BufWritePre", -- uncomment for format on save
+    event = "BufWritePre",
     opts = require "configs.conform",
   },
   {
