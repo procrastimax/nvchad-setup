@@ -22,6 +22,7 @@ local servers = {
       semanticTokens = "disable",
     },
   },
+  astro = {},
 }
 
 for name, opts in pairs(servers) do

@@ -13,6 +13,7 @@ local additional_languages = {
   "javascript",
   "bash",
   "python",
+  "astro",
 }
 
 -- Merge the current list with additional languages
